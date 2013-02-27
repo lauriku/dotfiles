@@ -8,4 +8,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Set up the bash prompt
 
-PS1="${Green}\w${Red}\$(__git_ps1) ${Blue}\$${NC} "
+PS1="${BWhite}\@ ${Green}\w${Red}\$(__git_ps1) ${Blue}\$${NC} "
