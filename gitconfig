@@ -18,3 +18,5 @@
 [user]
 	name = Lauri Kuittinen
 	email = lauriku@gmail.com
+[http]
+	sslVerify = false
