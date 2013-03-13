@@ -1,6 +1,8 @@
 . ~/.aliases
 . ~/.colors
 
+[ -e "$HOME/bin" ] && PATH=$PATH:$HOME/bin
+
 # RVM
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -8,4 +10,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Set up the bash prompt
 
-PS1="${BWhite}\@ ${Green}\w${Red}\$(__git_ps1) ${Blue}\$${NC} "
+#PS1="${BWhite}\@ ${Green}\w${Red}\$(__git_ps1) ${Blue}\$${NC} "
+
+PS1="\@ \w$(__git_ps1) \$ "
