@@ -12,4 +12,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 #PS1="${BWhite}\@ ${Green}\w${Red}\$(__git_ps1) ${Blue}\$${NC} "
 
-PS1="\@ \w$(__git_ps1) \$ "
+PS1="\@ \w\$(__git_ps1) \$ "

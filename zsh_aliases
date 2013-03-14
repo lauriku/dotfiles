@@ -1,0 +1,65 @@
+# Unix
+alias tlf="tail -f"
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias l='ls --color=auto'
+alias ll='ls --color=auto -la'
+alias lh='ls --color=auto -Alh'
+alias -g G='| grep'
+alias -g M='| less'
+alias -g L='| wc -l'
+alias -g ONE="| awk '{ print \$1}'"
+
+function take() {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+alias e='exit'
+
+function tarc() {
+  tar cvfz $1.tgz $1
+}
+function zipr() {
+  zip -r $1.zip $1
+}
+
+# Processes
+alias tu='top -o cpu' # cpu
+alias tm='top -o vsize' # memory
+
+# git
+alias g="git"
+alias gci="git pull --rebase && rake && git push"
+
+# Bundler
+alias b="bundle"
+
+# Tests and Specs
+alias t="ruby -I test"
+alias cuc="bundle exec cucumber"
+
+# Rubygems
+alias gi="gem install"
+alias giv="gem install -v"
+
+# Rails
+alias migrate="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
+
+# Own
+alias cd..="cd .."
+alias xclip="xclip -selection c"
+alias pubkey="cat ~/.ssh/id_rsa.pub | xclip"
+
+# Function for starting sublime on the background, and detach it from the current terminal
+
+function subl() {
+  nohup $HOME/sublime-text/sublime_text "$@" > /dev/null 2>&1 &
+}
+
+# Same for gitk
+
+function gitk() {
+  nohup /usr/bin/gitk "$@" > /dev/null 2>&1 &
+}
