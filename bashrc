@@ -1,4 +1,4 @@
-. ~/.aliases
+. ~/.bash_aliases
 . ~/.colors
 
 [ -e "$HOME/bin" ] && PATH=$PATH:$HOME/bin

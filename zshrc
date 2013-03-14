@@ -8,12 +8,17 @@ compinit
 # automatically enter directories without cd
 setopt auto_cd
 
-# use vim as an editor
+# use subl as an editor
 export EDITOR=subl
 
 # aliases
 if [ -e "$HOME/.zsh_aliases" ]; then
   source "$HOME/.zsh_aliases"
+fi
+
+# zlogin
+if [ -e "$HOME/.zlogin" ]; then
+  source "$HOME/.zlogin"
 fi
 
 # vi mode
@@ -34,11 +39,14 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
+# keybinds to go end of line, not start of line when browsing command history
+bindkey -M viins "\e[A" up-line-or-history
+bindkey -M viins "\e[B" down-line-or-history
+bindkey -M viins "\eOA" up-line-or-history
+bindkey -M viins "\eOB" down-line-or-history
+
 # expand functions in the prompt
 setopt prompt_subst
-
-# prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
 # ignore duplicate history entries
 setopt histignoredups
@@ -63,3 +71,6 @@ setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+# Enable shared history
+setopt SHARE_HISTORY
