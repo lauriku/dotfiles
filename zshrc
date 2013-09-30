@@ -9,7 +9,7 @@ compinit
 setopt auto_cd
 
 # use subl as an editor
-export EDITOR=subl
+export EDITOR=vim
 
 # aliases
 if [ -e "$HOME/.zsh_aliases" ]; then
@@ -20,6 +20,13 @@ fi
 if [ -e "$HOME/.zlogin" ]; then
   source "$HOME/.zlogin"
 fi
+
+# RVM
+if [ -e "$HOME/.rvm" ]; then
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+fi
+
 
 # vi mode
 bindkey -v
