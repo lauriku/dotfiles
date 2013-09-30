@@ -8,7 +8,7 @@ compinit
 # automatically enter directories without cd
 setopt auto_cd
 
-# use subl as an editor
+# use vim as an editor
 export EDITOR=vim
 
 # aliases
@@ -55,12 +55,6 @@ bindkey -M viins "\eOB" down-line-or-history
 # expand functions in the prompt
 setopt prompt_subst
 
-# ignore duplicate history entries
-setopt histignoredups
-
-# keep TONS of history
-export HISTSIZE=4096
-
 # look for ey config in project dirs
 export EYRC=./.eyrc
 
@@ -79,5 +73,10 @@ setopt CORRECT CORRECT_ALL
 # Enable extended globbing
 setopt EXTENDED_GLOB
 
-# Enable shared history
+# History settings
 setopt SHARE_HISTORY
+export SAVEHIST=4096
+export HISTFILE=~/.zhistory
+setopt INC_APPEND_HISTORY
+setopt HIST_SAVE_NO_DUPS
+export HISTSIZE=4096
