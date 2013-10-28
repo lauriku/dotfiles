@@ -18,6 +18,7 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 set title
+set number
 
 "" Vim Plugins
 set rtp+=~/.vim/bundle/vundle/
