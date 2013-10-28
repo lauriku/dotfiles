@@ -30,3 +30,4 @@ call vundle#rc()
 Bundle 'tpope/vim-rails.git'
 Bundle 'carlhuda/janus.git'
 Bundle 'mfukar/robotframework-vim.git'
+Bundle 'tejr/vim-nagios.git'
