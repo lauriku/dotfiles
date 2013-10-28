@@ -20,6 +20,9 @@ set smartcase                   " ... unless they contain at least one capital l
 set title
 set number
 
+"" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 "" Vim Plugins
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
