@@ -1,6 +1,5 @@
 # Unix
 alias grep="grep --color=auto"
-#alias ls="ls --color=auto"
 alias tlf="tail -f"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
@@ -51,14 +50,3 @@ alias cd..="cd .."
 alias xclip="xclip -selection c"
 alias pubkey="cat ~/.ssh/id_rsa.pub | xclip"
 
-# Function for starting sublime on the background, and detach it from the current terminal
-
-function subl() {
-  nohup $HOME/sublime_text_3/sublime_text "$@" > /dev/null 2>&1 &
-}
-
-# Same for gitk
-
-function gitk() {
-  nohup /usr/bin/gitk "$@" > /dev/null 2>&1 &
-}
